@@ -87,13 +87,11 @@ scss-project/
 @mixin ui-division-line, ui-inner-division | %, @mixin |
 | components/\_icons.scss | icon(used \_variables.scss) Placeholder Selectors(%) | % |
 | components/\_layers.scss  | %: layout-layer, layout-layer-promotion | % |
-| components/\_lists.scss | @mixin: list-detail-filter, list-detail-sort, hash-tag, list-m-top-plus, list-m-top-logo, list-m-top, list-normal-type, 
-%list-layout | %, @mixin |
+| components/\_lists.scss | @mixin: list-detail-filter, list-detail-sort, hash-tag, list-m-top-plus, list-m-top-logo, list-m-top, list-normal-type, %list-layout | %, @mixin |
 | components/\_messages.scss  | %layout-message, @mixin ui-message | %, @mixin |
 | components/\_tabs.scss  | %layout-tab, @mixin ui-tab-type-web, @mixin ui-tab-type-app | %, @mixin |
 | layout/   | | |
-| layout/\_aligns.scss | @mixin v-align, h-align, c-align,
-%layout-align | %, @mixin |
+| layout/\_aligns.scss | @mixin v-align, h-align, c-align, %layout-align | %, @mixin |
 | layout/\_footer.scss | .footer(main) | css |
 | layout/\_forms.scss | | |
 | layout/\_grid.scss | @mixin make-grid($size: 12), %layout-grid | %, @mixin |
