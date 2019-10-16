@@ -1,0 +1,119 @@
+@import "abstracts/_mixins";
+@import "layout/_aligns";
+@import "components/_icons";
+@import "components/_divisions";
+
+// main
+%header-util-button {
+	box-sizing: border-box;
+	display: inline-block;
+	padding: 10px 15px;
+	a {
+		position: relative;
+		display: inline-block;
+		vertical-align: middle;
+		margin: 0 3px;
+	}
+}
+
+header {
+	background-color: #fff;
+	position: relative;
+	z-index: 2200;
+	.header {
+		font-size: 0;
+		padding-top: 6px;
+		h1 {
+			@extend %header-util-button;
+			width: 68%;
+			text-align: center;
+			i {
+				@extend %icon-logo;
+				position: relative;
+				display: inline-block;
+				vertical-align: middle;
+				margin: 0 3px;
+				width: 88px;
+				height: 18px;
+			}
+		}
+		.aside-btn,
+		.mypage-btn {
+			@extend %header-util-button;
+			width: 16%;
+		}
+		.aside-btn .icon-hamberger {
+			@extend %icon-hamberger;
+			width: 15px;
+			height: 12px;
+		}
+		.mypage-btn {
+			text-align: right;
+			position: relative;
+			.icon-mypage {
+				@extend %icon-mypage;
+				width: 16px;
+				height: 18px;
+			}
+		}
+		.my-news a:after {
+			content: "";
+			display: block;
+			width: 5px;
+			height: 5px;
+			background-color: #ff4d1d;
+			border-radius: 50%;
+			position: absolute;
+			top: -5px;
+			right: -5px;
+		}
+	}
+	.search {
+		margin: 10px 0;
+		a {
+			display: block;
+			border-radius: 16px;
+			height: 32px;
+			background-color: #f6f6f6;
+			.icon-search {
+				@include v-align;
+				@extend %icon-search;
+				width: 14px;
+				height: 14px;
+				position: absolute;
+				right: 26px;
+			}
+		}
+	}
+	nav {
+		background-color: #fff;
+		ul {
+			@include clearfix;
+			li {
+				float: left;
+				width: 20%;
+				text-align: center;
+				a {
+					display: inline-block;
+					line-height: 40px;
+					width: 100%;
+					height: 40px;
+					letter-spacing: -1px;
+				}
+			}
+		}
+		&.isLogout li {
+			width: 19%;
+			&:last-child {
+				width: 24%;
+			}
+		}
+	}
+	.ui-inner {
+		@include ui-inner-division;
+	}
+
+	&.season .search a {
+		background-color: #fff;
+	}
+}
