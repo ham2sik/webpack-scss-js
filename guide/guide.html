@@ -1,0 +1,1226 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../dist/css/common.css" />
+		<link rel="stylesheet" type="text/css" href="../dist/css/guide.css" />
+		<link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR" rel="stylesheet" />
+		<link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet" />
+		<link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" />
+		<style>
+			body {
+				background-color: #fdfdfd;
+				padding: 0px 0 40px;
+				-webkit-box-sizing: border-box;
+				box-sizing: border-box;
+			}
+			img {
+				max-width: 100%;
+			}
+			.section-area {
+				position: relative;
+				z-index: 10;
+			}
+			.g-section {
+				background-color: #fff;
+				-webkit-box-sizing: border-box;
+				box-sizing: border-box;
+				padding: 40px 30px;
+				border: 1px solid #ddd;
+				width: 800px;
+				margin: 0px auto 10px;
+			}
+			.g-section > h2 {
+				margin-bottom: 30px;
+				position: relative;
+				font-size: 34px;
+				font-weight: 300;
+				display: block;
+				font-family: "Ubuntu", "Noto Sans KR", sans-serif, serif;
+			}
+			.g-section > h2:before {
+				content: "";
+				position: absolute;
+				height: 2px;
+				background-color: coral;
+				width: 5%;
+				display: block;
+				top: -20px;
+			}
+			.g-section.header-info {
+				padding-bottom: 10px;
+				border-top: 3px solid #ff6633;
+			}
+			.g-section.header-info h2:before {
+				display: none;
+			}
+			.g-section.header-info h3 {
+				font-weight: 100;
+				font-size: 18px;
+				font-family: "Verdana", serif;
+				margin-bottom: 20px;
+			}
+			.g-section.header-info .url {
+				font-size: 13px;
+				margin-top: 20px;
+			}
+			.g-section.header-info p {
+				font-weight: normal;
+				font-family: "Noto Sans KR", sans-serif;
+				margin: 0;
+				padding: 0;
+				line-height: 24px;
+				font-size: 12px;
+				color: #888;
+			}
+			.g-section h3 {
+				padding-top: 40px;
+			}
+			.g-section .url {
+				font-size: 12px;
+				font-family: "Source Code Pro", "Noto Sans KR", monospace, sans-serif;
+				margin-bottom: 20px;
+				letter-spacing: -0.5px;
+			}
+			.g-section .url a {
+				display: block;
+			}
+			.g-section p.selector {
+				padding: 0px 0px 6px;
+				margin: 40px 0 20px;
+				-webkit-box-sizing: border-box;
+				box-sizing: border-box;
+				font-weight: 500;
+				border-bottom: 1px dashed lightgray;
+				vertical-align: middle;
+				font-size: 18px;
+				letter-spacing: -0.5px;
+				color: #ff6633;
+				font-family: "Source Code Pro", "Noto Sans KR", sans-serif, serif;
+			}
+			.g-section .usage {
+				font-size: 14px;
+				margin: 0 0 10px 0px;
+				padding: 0 4px;
+				font-family: "Ubuntu", "Noto Sans KR", serif;
+				display: inline-block;
+				background-color: steelblue;
+				height: 20px;
+				line-height: 20px;
+				letter-spacing: 1px;
+				color: #fff;
+			}
+			.g-section p.selector:before {
+				content: "#";
+				font-size: 18px;
+				color: #ff6633;
+				margin: 0 4px;
+			}
+
+			.g-section .url a:hover {
+				text-decoration: underline;
+				color: #000 !important;
+			}
+			.g-section .iconContainer {
+				margin-top: 20px;
+			}
+			.g-section .iconBox {
+				float: left;
+				text-align: center;
+				height: 60px;
+				width: 25%;
+				position: relative;
+				margin: 12px 0;
+			}
+			.g-section .iconBox.inversion {
+				color: #494949;
+				background-color: #fff;
+			}		
+			.g-section .iconBox div {
+				display: inline-block;
+			}
+			.g-section .iconBox p {
+				position: absolute;
+				bottom: 0;
+				font-size: 11px;
+				font-family: "Verdana", serif;
+				letter-spacing: -0.2px;
+				font-weight: 100;
+				left: 50%;
+				-webkit-transform: translate(-50%, 0);
+				transform: translate(-50%, 0);
+				width: 100%;
+			}
+			.g-section .dropDown-menu {
+				position: relative;
+			}
+
+			.tag-guide li {
+				font-family: "Verdana", "Noto Sans KR", sans-serif;
+				font-size: 12px;
+			}
+			.tag-guide li span {
+				vertical-align: middle;
+			}
+			.tag {
+				font-family: "Verdana", "Noto Sans KR", sans-serif, serif;
+				font-weight: 100;
+				vertical-align: middle;
+				display: inline !important;
+			}
+			.tag.code {
+				border-radius: 3px;
+				padding: 0 6px;
+				height: 14px;
+				line-height: 14px;
+			}
+			.tag.all {
+				background-color: crimson;
+				color: #fff;
+			}
+			.tag.teal {
+				background-color: #00b5ad;
+				color: #fff;
+			}
+			.tag.olive {
+				background-color: #b5cc18;
+				color: #fff;
+			}
+			.tag.working {
+				background-color: coral;
+				color: #fff;
+			}
+			.tag.legacy {
+				background-color: #c9c9c9;
+				color: #666;
+			}
+
+			.file-list li {
+				position: relative;
+				font-size: 12px;
+			}
+			.file-list li span {
+				display: inline-block;
+				margin-top: 10px;
+				width: 140px;
+				font-family: "Noto Sans KR", sans-serif;
+				font-size: 12px;
+			}
+			.file-list li span.description {
+				width: 230px;
+				text-align: right;
+				color: coral;
+				text-decoration: none;
+			}
+
+			.g-icon {
+				position: relative;
+				display: inline-block;
+				background: url("https://ssl.pstatic.net/static.news/image/news/2018/10/31/sp_news.png") 0 0 no-repeat;
+				background-size: 818px 782px;
+				vertical-align: middle;
+			}
+			.ico-window-open {
+				width: 16px;
+				height: 16px;
+				background-position: -786px -436px;
+			}
+			.ico-up {
+				width: 23px;
+				height: 13px;
+				background-position: -529px -431px;
+				vertical-align: top;
+			}
+			.outdated * {
+				color: #aaa;
+				text-decoration: line-through;
+			}
+
+			.menu {
+				position: relative;
+				left: 10px;
+				width: 140px;
+				background-color: #fff;
+				z-index: 200;
+			}
+			.countless {
+				position: relative;
+			}
+			.countless button {
+				display: block;
+			}
+
+			/* scss guide add */
+			.s-color {
+				color: #fff;
+				background-color: #000;
+			}
+		</style>
+		<script src="http://m.albamon.com/js/jquery.js"></script>
+	</head>
+
+	<body>
+		<div class="section-area">
+			<section class="g-section header-info">
+				<h2>Albamon Mobile</h2>
+				<h3 class="mon-gray">Style Guide & CSS Module</h3>
+			</section>
+
+			<!-- Color -->
+			<section class="g-section s-color">
+				<h2>Color</h2>
+				<p>abstracts/_variables.scss에 선언된 변수를 base/_base에 사용</p>
+				<p>pages/common.scss에 import되어 공통으로 사용</p>
+				<p>color에 !important를 사용</p>
+				<h3>대표 컬러</h3>
+				<p>
+					<span class="color-main">.color-main</span>
+					&nbsp;&nbsp;&nbsp;
+					<span class="color-main-bg">.color-main-bg</span>
+					&nbsp;&nbsp;&nbsp;
+					<span class="color-secondary">.color-secondary</span>
+					&nbsp;&nbsp;&nbsp;
+					<span class="color-secondary-bg">.color-secondary-bg</span>
+				</p>
+				<h3>주 사용 컬러</h3>
+				<p>
+					<span class="color-apple">.color-apple</span>
+					&nbsp;&nbsp;&nbsp;
+					<span class="color-orange">.color-orange</span>
+					&nbsp;&nbsp;&nbsp;
+					<span class="color-blue">.color-blue</span>
+					&nbsp;&nbsp;&nbsp;
+					<span class="color-skyblue">.color-skyblue</span>
+					&nbsp;&nbsp;&nbsp;
+					<span class="color-deep-blue">.color-deep-blue</span>
+					&nbsp;&nbsp;&nbsp;
+					<span class="color-gray">.color-gray</span>
+					&nbsp;&nbsp;&nbsp;
+					<span class="color-light-gray">.color-light-gray</span>
+				</p>
+				<h3>급여 컬러</h3>
+				<p>
+					<span class="color-income-per-hour">.color-income-per-hour // 시급</span>
+					&nbsp;&nbsp;&nbsp;
+					<span class="color-daily-income">.color-daily-income // 일급</span>
+					&nbsp;&nbsp;&nbsp;
+					<span class="color-monthly-income">.color-monthly-income // 월급</span>
+					&nbsp;&nbsp;&nbsp;
+					<span class="color-income-per-case">.color-income-per-case // 건별</span>
+					&nbsp;&nbsp;&nbsp;
+					<span class="color-weekly-income">.color-weekly-income // 주급</span>
+					&nbsp;&nbsp;&nbsp;
+					<span class="color-yearly-income">.color-yearly-income // 연봉</span>
+				</p>
+			</section>
+
+			<!-- ui-button -->
+			<section class="g-section s-button">
+				<h2>%layout-layer (import "components/_layers")</h2>
+				<div class="url">
+					<span></span>
+					<a href=""></a>
+				</div>
+				<div class="ui-section">
+					<p class="selector">%layout-layer</p>
+					<div class="button-group">
+						<div class="grid-6"><button class="ui-button js-button-layer">default layer</button></div>
+						<div class="grid-6"><button class="ui-button js-button-layer-promotion">promotion layer</button></div>
+					</div>
+				</div>
+				<!-- default layer -->
+				<div class="layer-popup">
+					<div class="popup v-align">
+						<div class="popup-header">
+							<h1>TITLE</h1>
+							<button class="closed"></button>
+						</div>
+						<div class="popup-view">view</div>
+						<div class="popup-bottom">
+							<button class="grid-6 white">그만두기</button>
+							<button class="grid-6 white color-orange">계속 작성하기</button>
+						</div>
+					</div>
+				</div>
+				<!-- promotion layer -->
+				<div class="layer-popup-promotion">
+					<div class="promotion c-align">
+						<img class="promotion-image" src="http://img.albamon.com/MobileFloating/2019/layer2.png?20190925" alt="" />
+						<div class="popup-bottom">
+							<button class="grid-6 white">다시보지않기</button>
+							<button class="grid-6 white closed">닫기</button>
+						</div>
+					</div>
+				</div>
+				<script>
+					$(".js-button-layer").on("click", function() {
+						$(".layer-popup").addClass("on");
+					});
+					$(".layer-popup .closed").on("click", function() {
+						$(".layer-popup").removeClass("on");
+					});
+					$(".js-button-layer-promotion").on("click", function() {
+						$(".layer-popup-promotion").addClass("on");
+					});
+					$(".layer-popup-promotion .closed").on("click", function() {
+						$(".layer-popup-promotion").removeClass("on");
+					});
+				</script>
+			</section>
+			<!-- ui-button -->
+			<section class="g-section s-button">
+				<h2>ui-button(기존 mon-button)</h2>
+				<div class="url">
+					<span></span>
+					<a href=""></a>
+				</div>
+				<div class="ui-section">
+					<p class="selector">.ui-button - 기본형</p>
+					<div class="button-group">
+						<button class="ui-button">default</button>
+						<button class="ui-button" disabled>:disabled</button>
+					</div>
+					<p class="selector">.ui-button - add grid class</p>
+					<div class="button-group">
+						<button class="ui-button grid-3">add .grid-3</button>
+						<button class="ui-button grid-9">add .grid-9</button>
+						<button class="ui-button grid-6">add .grid-6</button>
+						<button class="ui-button grid-6">add .grid-6</button>
+					</div>
+					<p class="selector">.ui-button - add color class</p>
+					<div class="button-group">
+						<button class="ui-button grid-3 navy">add .navy</button>
+						<button class="ui-button grid-3 white">add .white</button>
+						<button class="ui-button grid-3 orange">add .orange</button>
+						<button class="ui-button grid-3 light-gray">add .light-gray</button>
+						<button class="ui-button grid-3 dark-gray">add .dark-gray</button>
+					</div>
+				</div>
+			</section>
+
+			<!-- button-group -->
+			<section class="g-section s-button">
+				<h2>button-group(기존 ui-buttons)</h2>
+				<div class="url">
+					<span></span>
+					<a href=""></a>
+				</div>
+				<div class="ui-section">
+					<p class="selector">.button-group.submit(height: 48px) and div.grid-6</p>
+					<div class="button-group submit">
+						<div class="grid-6"><button class="ui-button orange">확인</button></div>
+						<div class="grid-6"><button class="ui-button">취소</button></div>
+					</div>
+
+					<p class="selector">content button(height: 40px)</p>
+					<div>div.grid-4: 33%</div>
+					<div class="button-group">
+						<div class="grid-4"><button class="ui-button" disabled>.ui-button:disable</button></div>
+						<div class="grid-4"><button class="ui-button navy">.ui-button.navy</button></div>
+						<div class="grid-4"><button class="ui-button orange">.ui-button.orange</button></div>
+					</div>
+					<div>div.grid-3: 25%</div>
+					<div class="button-group">
+						<div class="grid-3"><button class="ui-button navy">.ui-button.navy</button></div>
+						<div class="grid-3"><button class="ui-button light-gray">.ui-button.light-gray</button></div>
+						<div class="grid-3"><button class="ui-button orange">.ui-button.orange</button></div>
+						<div class="grid-3"><button class="ui-button">.ui-button</button></div>
+					</div>
+					<div>div.grid-3 + div.grid-9</div>
+					<div class="button-group">
+						<div class="grid-3"><button class="ui-button navy">.ui-button.navy</button></div>
+						<div class="grid-9"><button class="ui-button orange">.ui-button.orange</button></div>
+					</div>
+				</div>
+			</section>
+
+			<!-- %layout-grid -->
+			<section class="g-section s-button">
+				<h2>%layout-grid (import "layout/_grid")</h2>
+				<div class="url">
+					<span></span>
+					<a href=""></a>
+				</div>
+				<div class="ui-section">
+					<p class="selector">grid example</p>
+					<p>grid-1: width 8.33333%</p>
+					<p>grid-11: width 91.66667%</p>
+					<div class="button-group">
+						<button class="ui-button grid-1 navy">grid-1</button>
+						<button class="ui-button grid-11 white">grid-11</button>
+					</div>
+					<p>grid-2: width 16.66667%</p>
+					<p>grid-10: width 83.33333%</p>
+					<div class="button-group">
+						<button class="ui-button grid-2 light-gray">grid-2</button>
+						<button class="ui-button grid-10 dark-gray">grid-10</button>
+					</div>
+					<p>grid-3: width 25%</p>
+					<p>grid-9: width 75%</p>
+					<div class="button-group">
+						<button class="ui-button grid-3 orange">grid-3</button>
+						<button class="ui-button grid-9 light-gray">grid-9</button>
+					</div>
+					<p>grid-4: width 33.33333%</p>
+					<p>grid-8: width 66.66667%</p>
+					<div class="button-group">
+						<button class="ui-button grid-4 dark-gray">grid-4</button>
+						<button class="ui-button grid-8 navy">grid-8</button>
+					</div>
+					<p>grid-5: width 41.66667%</p>
+					<p>grid-7: width 58.33333%</p>
+					<div class="button-group">
+						<button class="ui-button grid-5 navy">grid-5</button>
+						<button class="ui-button grid-7 white">grid-7</button>
+					</div>
+					<p>grid-6: width 50%</p>
+					<div class="button-group">
+						<button class="ui-button grid-6 white">grid-6</button>
+						<button class="ui-button grid-6 orange">grid-6</button>
+					</div>
+				</div>
+			</section>
+
+			<!-- ui-tab -->
+			<section class="g-section s-tab">
+				<h2>ui-tab</h2>
+				<div class="url">
+					<span></span>
+					<a href=""></a>
+				</div>
+				<div class="ui-section">
+					<p class="selector">Mobile Web</p>
+					<div class="ui-tab-type-web">
+						<button type="button" class="tabItem grid-6 active">
+							활동내역매칭
+						</button>
+						<button type="button" class="tabItem grid-6">
+							프로필매칭
+						</button>
+					</div>
+					<br /><br />
+					<p class="selector">App Style</p>
+					<div class="ui-dividing">
+						<div class="ui-tab-type-app">
+							<button type="button" class="tabItem grid-4">
+								<span> 기업사진</span>
+							</button>
+							<button type="button" class="tabItem grid-4 active">
+								<span> 기업동영상</span>
+							</button>
+							<button type="button" class="tabItem grid-4">
+								<span> 공고사진</span>
+							</button>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- ui-division-line -->
+			<section class="g-section s-dividing">
+				<h2>ui-division-line</h2>
+				<div class="url">
+					<span></span>
+					<a href=""></a>
+				</div>
+				<div class="ui-section">
+					<div class="ui-dividing">
+						<div class="ui-inner">
+							.ui-dividing
+						</div>
+					</div>
+					<div class="ui-dividing expand">
+						<div class="ui-inner">
+							.ui-dividing.expand
+						</div>
+					</div>
+					<div class="ui-dividing none-border">
+						<div class="ui-inner">
+							.ui-dividing.none-border
+						</div>
+					</div>
+					<div class="ui-dividing bg-gray">
+						<div class="ui-inner">
+							.ui-dividing.bg-gray
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- ui-inner-division -->
+			<section class="g-section s-dividing">
+				<h2>ui-inner-division</h2>
+				<div class="url">
+					<span></span>
+					<a href=""></a>
+				</div>
+				<div class="ui-section">
+					<div class="ui-dividing">
+						<div class="ui-inner">
+							.ui-dividing .ui-inner
+						</div>
+					</div>
+					<div class="ui-dividing">
+						<div class="ui-inner none-top">
+							.ui-dividing .ui-inner.none-top
+						</div>
+					</div>
+					<div class="ui-dividing">
+						<div class="ui-inner none-bottom">
+							.ui-dividing .ui-inner.none-bottom
+						</div>
+					</div>
+					<div class="ui-dividing">
+						<div class="ui-inner min">
+							.ui-dividing .ui-inner.min
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- ui-message -->
+			<section class="g-section s-message">
+				<h2>ui-message</h2>
+				<div class="url">
+					<span></span>
+					<a href=""></a>
+				</div>
+				<div class="ui-message">
+					<span>.ui-message</span>
+				</div>
+				<p class="selector">message type</p>
+				<div class="ui-message warn">
+					<span>.ui-message.warn</span>
+				</div>
+				<br />
+				<div class="ui-message info">
+					<span>.ui-message.info</span>
+				</div>
+				<br />
+				<div class="ui-message list">
+					<span>.ui-message.list</span>
+				</div>
+				<p class="selector">message decoration</p>
+				<div class="ui-message round">
+					<span>.ui-message.round</span>
+				</div>
+				<br />
+				<div class="ui-message gray">
+					<span>.ui-message.gray</span>
+				</div>
+				<br />
+				<div class="ui-message light-gray">
+					<span>.ui-message.light-gray</span>
+				</div>
+				<br />
+				<div class="ui-message dark-gray">
+					<span>.ui-message.dark-gray</span>
+				</div>
+				<br />
+				<div class="ui-message white">
+					<span>.ui-message.white</span>
+				</div>
+				<br />
+				<div class="ui-message vanilla">
+					<span>.ui-message.vanilla</span>
+				</div>
+				<br />
+				<div class="ui-message nonLine">
+					<span>.ui-message.nonLine</span>
+				</div>
+				<br />
+				<div class="ui-message full">
+					<span>.ui-message.full - add border-bottom</span>
+				</div>
+			</section>
+
+			<!-- ui-select -->
+			<section class="g-section s-select">
+				<h2>select</h2>
+				<div class="url">
+					<a href=""></a>
+				</div>
+				<p class="selector">common.css에 선언 - _reset.scss 요소</p>
+				<div>
+					<select name="" id="">
+						<option>선택</option>
+					</select>
+				</div>
+			</section>
+
+			<!-- ui-icon -->
+			<section class="g-section s-color">
+				<h2>ui-icon</h2>
+				<p class="selector">common 아이콘</p>
+				<div class="iconContainer">
+					<div class="iconBox">
+						<span class="icon-emergency">급구</span>
+						<p>.icon-emergency</p>
+					</div>
+				</div>
+				<p class="selector">common 요소에서 사용중인 아이콘</p>
+				<div class="iconContainer">
+					<div class="iconBox">
+						<div class="icon-menu-down"></div>
+						<p>select</p>
+					</div>
+					<div class="iconBox">
+						<div class="icon-triangle-bottom-gray"></div>
+						<p>list > select</p>
+					</div>
+					<div class="iconBox">
+						<div class="icon-menu-right-orange"></div>
+						<p>list > 지원하기 버튼</p>
+					</div>
+					<div class="iconBox">
+						<div class="icon-detail-filter"></div>
+						<p>list > 상세검색 버튼</p>
+					</div>
+					<div class="iconBox">
+						<div class="icon-plus"></div>
+						<p>list > 상세검색 icon</p>
+					</div>
+					<div class="iconBox">
+						<div class="icon-triangle-top"></div>
+						<p>list > 상세검색 icon</p>
+					</div>
+					<div class="iconBox">
+						<div class="icon-triangle-bottom"></div>
+						<p>list > 상세검색 icon</p>
+					</div>
+					<div class="iconBox">
+						<div class="hash-tag"><span class="contract">근로계약서</span></div>
+						<p>list > .hash-tag .contract</p>
+					</div>
+					<div class="iconBox">
+						<div class="icon-star"></div>
+						<p>list > 스크랩 버튼 on</p>
+					</div>
+					<div class="iconBox">
+						<div class="icon-star-empty"></div>
+						<p>list > 스크랩 버튼 off</p>
+					</div>
+					<div class="iconBox">
+						<div class="icon-infomation"></div>
+						<p>list > 안내 버튼</p>
+					</div>
+					<div class="iconBox">
+						<div class="icon-hot-label"></div>
+						<p>list > hot icon(label)</p>
+					</div>
+					<div class="iconBox">
+						<div class="icon-hot"></div>
+						<p>list > hot icon</p>
+					</div>
+					<div class="iconBox">
+						<div class="icon-remove"></div>
+						<p>layer > 닫기 버튼</p>
+					</div>
+					<div class="iconBox inversion">
+						<div class="icon-hamberger"></div>
+						<p>header > menu 버튼</p>
+					</div>				
+					<div class="iconBox inversion">
+						<div class="icon-logo"></div>
+						<p>header > logo 버튼</p>
+					</div>	
+					<div class="iconBox inversion">
+						<div class="icon-mypage"></div>
+						<p>header > mypage 버튼</p>
+					</div>	
+					<div class="iconBox">
+						<div class="icon-search"></div>
+						<p>header > search 버튼</p>
+					</div>	
+					<div class="iconBox">
+						<div class="icon-triangle-top-footer"></div>
+						<p>footer > 더보기 버튼</p>
+					</div>
+				</div>
+				<p class="selector">아이콘</p>
+				<div class="iconContainer">
+					<div class="iconBox">
+						<div class="icon-exclamation"></div>
+						<p>.icon-exclamation</p>
+					</div>
+					<div class="iconBox inversion">
+						<div class="icon-menu-right-black"></div>
+						<p>use function icon-menu-right</p>
+					</div>
+					<div class="iconBox">
+						<div class="icon-menu-right-white"></div>
+						<p>use function icon-menu-right</p>
+					</div>
+				</div>
+			</section>
+
+			<!-- Header -->
+			<section class="g-section s-header">
+				<h2>Header</h2>
+				<div class="url">
+					<span></span>
+					<a href=""></a>
+				</div>
+				<p class="selector">main - default</p>
+				<p>기존 코드에서 불필요 요소(.util-btn, .ui-icon, .v-align, .clearfix) 제거</p>
+				<header>
+					<div class="header">
+						<div class="aside-btn">
+							<a href="" role="button" class="icon-hamberger"></a>
+						</div>
+						<h1>
+							<a role="button">
+								<i class="icon-logo"></i>
+							</a>
+							<span class="blind">albamon</span>
+						</h1>
+						<div class="mypage-btn">
+							<a href="" role="button" class="icon-mypage"></a>
+						</div>
+					</div>
+					<div class="ui-inner side search">
+						<a href="">
+							<i class="icon-search"></i>
+						</a>
+					</div>
+					<nav class="ui-inner side">
+						<ul>
+							<li><a href="/recruit/suit">맞춤알바</a></li>
+							<li><a href="/recruit/area">지역알바</a></li>
+							<li><a href="/recruit/map">알바지도</a></li>
+							<li><a href="/recruit/period?rdt=A">단기알바</a></li>
+							<li><a href="/recruit/wanted">급구알바</a></li>
+						</ul>
+					</nav>
+				</header>
+				<p class="selector">main - add nav.isLogout</p>
+				<header>
+					<div class="header">
+						<div class="aside-btn">
+							<a href="" role="button" class="icon-hamberger"></a>
+						</div>
+						<h1>
+							<a role="button">
+								<i class="icon-logo"></i>
+							</a>
+							<span class="blind">albamon</span>
+						</h1>
+						<div class="mypage-btn">
+							<a href="" role="button" class="icon-mypage"></a>
+						</div>
+					</div>
+					<div class="ui-inner side search">
+						<a href="">
+							<i class="icon-search"></i>
+						</a>
+					</div>
+					<nav class="ui-inner side isLogout">
+						<ul class="clearfix">
+							<li><a href="/recruit/area">채용정보</a></li>
+							<li><a href="/recruit/map">알바지도</a></li>
+							<li><a href="/resumesearch">인재정보</a></li>
+							<li><a href="/community/info/page/1">알바토크</a></li>
+							<li><a href="/login/login.asp">회원서비스</a></li>
+						</ul>
+					</nav>
+				</header>
+			</section>
+
+			<!-- Footer -->
+			<section class="g-section s-header">
+				<h2>Footer</h2>
+				<div class="url">
+					<span></span>
+					<a href=""></a>
+				</div>
+				<p class="selector">main - default</p>
+				<div class="footer">
+					<div class="ui-inner side ui-buttons">
+							<div class="quarter">
+								<button id="devFooterLogin" class="mon-button white">로그인</button>
+							</div>
+							<div class="quarter">
+								<button id="devFooterSignUp" class="mon-button white">회원가입</button>
+							</div>
+				
+						<div class="quarter">
+							<button id="devFooterCustomerCenter" class="mon-button white">고객센터</button>
+						</div>
+				
+						<div class="quarter">
+								<button id="devFooterAlbamonApp" class="mon-button white">알바몬앱</button>
+						</div>
+					</div>
+				
+					<div class="footer_info">
+						<a id="devFooterAgree" href="javascript:;">회원약관</a>
+						<a id="devFooterPrivacy" href="javascript:;">개인정보처리방침</a>
+						<a id="devFooterPcView" href="javascript:;">PC버전</a>
+					</div>
+				
+					<button type="button" class="copyright">
+						<img src="http://mc.albamon.kr/monimg/mws/main/copyright.png" alt="© JOBKOREA Corp.">
+						<i class="ui-icon ico-footer-arrow" style="transform: rotateX(180deg);"></i>
+					</button>
+				
+					<address style="display: none;">
+						<span>서울시 서초구 서초대로 301 동익성봉빌딩 16~18층 잡코리아</span>
+						<span>대표 : 윤병준 | 사업자등록번호 : 110-81-34859</span>
+						<span>직업정보제공사업 신고번호 : 서울청 제2016-11호</span>
+						<span>통신판매업 신고번호 : 2016-서울서초-0287호</span>
+						<span>고객센터 : 1588-9351</span>
+					</address>
+				</div>
+			</section>	
+
+			<!-- List Search Info -->
+			<section class="g-section">
+				<h2>List Search Info</h2>
+				<div class="url">
+					<span></span>
+					<a href=""></a>
+				</div>
+				<p class="selector">List 상세정보</p>
+				<section class="list-detail-filter">
+					<a href="#none" class="result-detail-filter">
+						<span class="text">검색조건을 추가하려면 누르세요.</span>
+						<span class="icon-plus"></span>
+					</a>
+					<button class="button-detail-filter" type="button">상세검색</button>
+					<div class="layer-infomation hide">
+						<dl>
+							<dt>근무지역</dt>
+							<dd>울산 / 서울</dd>
+						</dl>
+						<dl>
+							<dt>업직종</dt>
+							<dd>아이스크림.디저트, 안내데스크, 보조출연</dd>
+						</dl>
+						<dl>
+							<dt>근무기간</dt>
+							<dd>6개월~1년</dd>
+						</dl>
+						<dl>
+							<dt>고용형태</dt>
+							<dd>알바 / 정규직</dd>
+						</dl>
+					</div>
+				</section>
+				<section class="list-detail-filter">
+					<a href="#none" class="result-detail-filter">
+						<span class="text"> <em>울산 외 1</em>, <em>일반음식점 외 2</em>, <em>6개월~1년</em>, 알바 외 1 </span>
+						<span class="icon-triangle-top"></span>
+					</a>
+					<button class="button-detail-filter" type="button">상세검색</button>
+					<div class="layer-infomation hide">
+						<dl>
+							<dt>근무지역</dt>
+							<dd>울산 / 서울</dd>
+						</dl>
+						<dl>
+							<dt>업직종</dt>
+							<dd>아이스크림.디저트, 안내데스크, 보조출연</dd>
+						</dl>
+						<dl>
+							<dt>근무기간</dt>
+							<dd>6개월~1년</dd>
+						</dl>
+						<dl>
+							<dt>고용형태</dt>
+							<dd>알바 / 정규직</dd>
+						</dl>
+					</div>
+				</section>
+				<section class="list-detail-filter">
+					<a href="#none" class="result-detail-filter">
+						<span class="text"> <em>울산 외 1</em>, <em>일반음식점 외 2</em>, <em>6개월~1년</em>, 알바 외 1 </span>
+						<span class="icon-triangle-bottom"></span>
+					</a>
+					<button class="button-detail-filter" type="button">상세검색</button>
+					<div class="layer-infomation">
+						<dl>
+							<dt>근무지역</dt>
+							<dd>울산 / 서울</dd>
+						</dl>
+						<dl>
+							<dt>업직종</dt>
+							<dd>아이스크림.디저트, 안내데스크, 보조출연</dd>
+						</dl>
+						<dl>
+							<dt>근무기간</dt>
+							<dd>6개월~1년</dd>
+						</dl>
+						<dl>
+							<dt>고용형태</dt>
+							<dd>알바 / 정규직</dd>
+						</dl>
+					</div>
+				</section>
+				<br /><br /><br /><br /><br /><br />
+				<p class="selector">List 정렬</p>
+				<div class="list-detail-sort">
+					<span class="total"> 총<em id="devTitleTCnt">10,000</em>건 </span>
+					<div class="sort">
+						<select name="devSchOrder" class="devSchOrder">
+							<option value="8" selected="selected">정렬조건</option>
+							<option value="0">최신등록순</option>
+							<option value="2">시급높은순</option>
+							<option value="3">일급높은순</option>
+							<option value="4">주급높은순</option>
+							<option value="5">월급높은순</option>
+							<option value="7">연봉높은순</option>
+						</select>
+					</div>
+				</div>
+			</section>
+
+			<!-- recruit list -->
+			<section class="g-section">
+				<h2>recruit list</h2>
+				<div class="url">
+					<span></span>
+					<a href=""></a>
+				</div>
+				<p class="selector">M TOP Plus Type</p>
+				<div class="list-m-top-plus">
+					<h2>
+						<span class="gTit">M TOP-Plus</span>
+						<button type="button" class="goodsGuide">안내</button>
+					</h2>
+					<ul class="recruit-list">
+						<li>
+							<a href="" class="recruit-item">
+								<div class="hot">hot</div>
+								<div class="visual" style="background-image: url('http://mc.albamon.kr/monimg/mws/listBnr/MTOP-Plus/1/15.png');">
+									<div class="logo">
+										<img src="http://img.albamon.kr/franchise_booth/34/MBrandMain_Logo(0).gif" alt="투썸플레이스" />
+									</div>
+									<div class="tag-wrap">
+										<div class="tag today">오늘등록</div>
+									</div>
+								</div>
+								<div class="giName">투썸플레이스</div>
+								<div class="title">투썸플레이스 혜화로타리점에서 토/일 미들 STAFF 경력자 모집합니다.</div>
+								<div class="etc">대전 중구 전체<span class="dot">·</span> <em class="icPayC">월급</em> 2,000,000원</div>
+								<div class="hash-tag">
+									<span class="contract">근로계약서</span>
+									<span>노은역</span>
+									<span>장기근무</span>
+									<span>주부가능</span>
+									<span>초보가능</span>
+									<span>친구와함께</span>
+									<span>침례신학대학교</span>
+								</div>
+							</a>
+							<button type="button" class="button-scrap">
+								<span class="skip">스크랩</span>
+							</button>
+						</li>
+						<li class="type-add-keyword">
+							<a href="" class="recruit-item">
+								<div class="hot">hot</div>
+								<div class="visual" style="background-image: url('http://mc.albamon.kr/monimg/mws/listBnr/MTOP-Plus/1/14.png');">
+									<div class="logo">
+										<img src="http://img.albamon.kr/franchise_booth/34/MBrandMain_Logo(0).gif" alt="투썸플레이스" />
+									</div>
+									<div class="tag-wrap">
+										<div class="tag">D-5</div>
+									</div>
+								</div>
+								<div class="keyword">
+									<span>성과금최대 300% #경력우대 #초보환영</span>
+								</div>
+								<div class="giName">투썸플레이스</div>
+								<div class="title">투썸플레이스 혜화로타리점에서 토/일 미들 STAFF 경력자 모집합니다.</div>
+								<div class="etc">대전 중구 전체<span class="dot">·</span> <em class="icPayC">월급</em> 2,000,000원</div>
+								<div class="hash-tag">
+									<span class="contract">근로계약서</span>
+									<span>노은역</span>
+									<span>장기근무</span>
+									<span>주부가능</span>
+									<span>초보가능</span>
+									<span>친구와함께</span>
+									<span>침례신학대학교</span>
+								</div>
+							</a>
+							<button type="button" class="button-scrap on">
+								<span class="skip">스크랩</span>
+							</button>
+						</li>
+					</ul>
+				</div>
+				<p class="selector">LOGO Type</p>
+				<div class="list-m-top-logo">
+					<h2>
+						<span class="gTit">M TOP-Logo</span>
+						<button type="button" class="goodsGuide">안내</button>
+					</h2>
+					<ul class="recruit-list">
+						<li>
+							<a href="" class="recruit-item">
+								<div class="hot">hot</div>
+								<div class="logo">
+									<img src="http://img.albamon.kr/trans/115x46/2015-09-03/f89x1wmnfmk30s.gif.png" alt="테이블스타" />
+								</div>
+								<div class="giName">테이블스타</div>
+								<div class="title"><span class="title-keyword">#월급</span>[코엑스]이탈리안레스토랑 테이블스타 코엑스점 홀 직원 및 파트타이머 모집</div>
+								<div class="description">시간협의 <span class="dot">·</span>1년이상<span class="dot">·</span>내 위치에서 <span class="color-orange">200m</span></div>
+								<div class="hash-tag">
+									<span class="contract">근로계약서</span>
+									<span>봉은사역</span>
+									<span>장기근무</span>
+									<span>초보가능</span>
+								</div>
+								<div class="etc">서울 강남구 전체<span class="dot">·</span><em class="color-monthly-income">월급</em> 1,830,000원</div>
+							</a>
+							<button type="button" class="button-scrap">
+								<span class="skip">스크랩</span>
+							</button>
+							<a href="" class="button-apply">지원하기</a>
+						</li>
+						<li class="type-add-keyword">
+							<a href="" class="recruit-item">
+								<div class="keyword"><span>19년급여인상 / 평일근무가능 / 단순주문접수</span></div>
+								<div class="logo">
+									<img src="http://img11.albamon.kr/trans/115x46/2017-07-19/1229zecvzih5gxua.gif.png" alt="KB국민카드 대전고객센터" onerror="this.src='http://img.albamon.kr/200x80/mon_booth.gif'" />
+								</div>
+								<div class="giName">KB국민카드 대전고객센터</div>
+								<div class="title"><span class="icon-emergency">급구</span>[신입직원 지원 최대 100만원/육아휴직] 대전 국민카드 상담원 모집</div>
+								<div class="description">09:00 ~ 18:00 <span class="dot">·</span>1년이상<span class="dot">·</span>내 위치에서 <span class="color-orange">200m</span></div>
+								<div class="hash-tag">
+									<span class="contract">근로계약서</span>
+									<span>노은역</span>
+									<span>장기근무</span>
+									<span>주부가능</span>
+									<span>초보가능</span>
+									<span>친구와함께</span>
+									<span>침례신학대학교</span>
+								</div>
+								<div class="etc">대전 중구 전체<span class="dot">·</span><em class="color-monthly-income">월급</em> 2,000,000원</div>
+							</a>
+							<button type="button" class="button-scrap on">
+								<span class="skip">스크랩</span>
+							</button>
+							<a href="" class="button-apply">지원하기</a>
+						</li>
+					</ul>
+				</div>
+				<p class="selector">BOX Type</p>
+				<div class="list-m-top">
+					<h2>
+						<span class="gTit">M TOP</span>
+						<button type="button" class="goodsGuide">안내</button>
+					</h2>
+					<ul class="recruit-list">
+						<li>
+							<a href="" class="recruit-item">
+								<div class="giName"><span class="hot"></span>주식회사 퀸즈블랙</div>
+								<div class="title">퀸즈블랙 강남점 책임자/직원/알바 모집합니다</div>
+								<div class="description">시간협의<span class="dot">·</span>6개월~1년<span class="dot">·</span>내 위치에서 <span class="color-orange">200m</span></div>
+								<div class="hash-tag">
+									<span class="contract">근로계약서</span>
+									<span>강남역</span>
+									<span>장기근무</span>
+									<span>서울교육대학교</span>
+								</div>
+								<div class="etc">서울 강남구 역삼동<span class="dot">·</span><em class="color-monthly-income">월급</em> 2,500,000원</div>
+							</a>
+							<button class="button-scrap" type="button">
+								<span class="skip">스크랩</span>
+							</button>
+							<a href="" class="button-apply">지원하기</a>
+						</li>
+						<li class="type-add-keyword">
+							<div class="keyword"><span>19년급여인상 / 평일근무가능 / 단순주문접수</span></div>
+							<a href="" class="recruit-item">
+								<div class="giName color-orange">홍대 새우잡이 김춘배&amp;두툼장어</div>
+								<div class="title"><span class="title-keyword">#주말</span>[홍대/주5일/골목사장되기] 3년안에 내 장사 시작 할 청춘크루 모집</div>
+								<div class="description">시간협의<span class="dot">·</span>6개월~1년<span class="dot">·</span>내 위치에서 <span class="color-orange">200m</span></div>
+								<div class="hash-tag">
+									<span class="contract">근로계약서</span>
+									<span>상수역</span>
+									<span>장기근무</span>
+									<span>초보가능</span>
+									<span>홍익대학교(서울캠퍼스)</span>
+								</div>
+								<div class="etc">서울 마포구 서교동<span class="dot">·</span><em class="color-income-per-hour">시급</em> 8,500원</div>
+							</a>
+							<button class="button-scrap on" type="button">
+								<span class="skip">스크랩</span>
+							</button>
+							<a href="" class="button-apply">지원하기</a>
+						</li>
+					</ul>
+				</div>
+				<p class="selector">NORMAL Type</p>
+				<div class="list-normal-type">
+					<h2>
+						<span class="gTit">NORMAL</span>
+						<button type="button" class="goodsGuide">안내</button>
+					</h2>
+					<ul class="recruit-list">
+						<li>
+							<a href="" class="recruit-item">
+								<div class="giName">서비스점검</div>
+								<div class="title">테스트공고입니다. 지원하지 마세요.</div>
+								<div class="description">15~50세<span class="dot">·</span>성별무관 <span class="dot">·</span>09:00~06:00</div>
+								<div class="etc">
+									서울 서초구 서초동
+									<span class="dot">·</span><em class="color-income-per-hour">시급</em> 6,470원
+								</div>
+							</a>
+							<button class="button-scrap" type="button"><span class="skip">스크랩</span></button>
+							<div class="time">40분전</div>
+							<a href="" class="button-apply">지원하기</a>
+						</li>
+						<li>
+							<a href="" class="recruit-item">
+								<div class="giName">롯데리아</div>
+								<div class="title">Aos 프랜 마감 재등록</div>
+								<div class="description">19~86세<span class="dot">·</span>성별무관 <span class="dot">·</span>10:00~20:00</div>
+								<div class="etc">
+									서울 서초구 서초동
+									<span class="dot">·</span><em class="color-daily-income">일급</em> 90,000원
+								</div>
+							</a>
+							<button class="button-scrap on" type="button"><span class="skip">스크랩</span></button>
+							<div class="time">3/8</div>
+							<a href="" class="button-apply">지원하기</a>
+						</li>
+						<li>
+							<a href="" onclick="" class="recruit-item">
+								<div class="giName "><span class="hot"></span>성북동 면옥집 본점</div>
+								<div class="title">(성북동 면옥집) 홀 서버 및 주방 인력 모집하니다.</div>
+								<div class="description">시간협의<span class="dot">·</span>3개월~6개월<span class="dot">·</span>내 위치에서 <span class="color-orange">200m</span></div>
+								<div class="etc">서울 성북구 성북동<span class="dot">·</span><em class="color-monthly-income">월급</em> 2,060,000원</div>
+							</a>
+							<button class="button-scrap" type="button">
+								<span class="skip">스크랩</span>
+							</button>
+							<div class="time">16분전</div>
+							<a href="" class="button-apply">지원하기</a>
+						</li>
+						<li>
+							<a href="" onclick="" class="recruit-item">
+								<div class="giName">
+									㈜삼성화재서비스손해사정
+								</div>
+								<div class="title">삼성화재서비스 사무(정보입력) 공채[주5일/영등포]</div>
+								<div class="description">시간협의<span class="dot">·</span>3개월~6개월<span class="dot">·</span>내 위치에서 <span class="color-orange">200m</span></div>
+								<div class="etc">서울 영등포구 당산동3가<span class="dot">·</span><em class="color-yearly-income">연봉</em> 24,060,000원</div>
+							</a>
+							<button class="button-scrap on" type="button">
+								<span class="skip">스크랩</span>
+							</button>
+							<div class="time">16분전</div>
+							<a href="" class="button-apply">지원하기</a>
+						</li>
+					</ul>
+				</div>
+			</section>
+		</div>
+	</body>
+</html>
