@@ -1,0 +1,84 @@
+// type: @mixin, %(플레이스홀더 셀렉터, 가상선택자)
+
+%layout-message {
+	box-sizing: border-box;
+	background-color: #fffdf2;
+	text-align: center;
+	color: #ff6633;
+	display: table;
+	height: 36px;
+	line-height: 36px;
+	width: 100%;
+	position: relative;
+	z-index: 1;
+	margin-bottom: -1px;
+	& > span {
+		font-size: 12px;
+		display: table-cell;
+		vertical-align: middle;
+	}
+}
+@mixin ui-message() {
+	@extend %layout-message;
+	// message type
+	&.warn {
+		background-color: #fff1ec;
+		padding: 0 12px;
+		span {
+			color: #988070;
+			text-align: left;
+			font-weight: 600;
+			width: 100%;
+		}
+	}
+	&.info {
+		background-color: #f7fbfe;
+		padding: 0 12px;
+		height: 48px;
+		text-align: left;
+		span {
+			color: #78838e;
+			font-size: 13px;
+			font-weight: 600;
+		}
+	}
+	&.list {
+		display: block;
+		height: auto;
+		line-height: inherit;
+	}
+	// message decoration
+	&.round {
+		border-radius: 2px;
+	}
+	&.gray {
+		background-color: #f9f9f9;
+		color: #999999;
+	}
+	&.light-gray {
+		background-color: #f8fafc;
+		border: 1px solid #eef1f4;
+		color: #222222;
+		span {
+			color: #92a8be;
+		}
+	}
+	&.dark-gray {
+		background-color: #e8ebee;
+	}
+	&.white {
+		background-color: #fff;
+		color: #999999;
+		border: 1px solid #bdbfc4;
+	}
+	&.vanilla {
+		background-color: #fffaf0;
+		color: #a89d8a;
+	}
+	&.nonLine {
+		border: none;
+	}
+	&.full {
+		border-bottom: 1px solid #f1efdf;
+	}
+}
