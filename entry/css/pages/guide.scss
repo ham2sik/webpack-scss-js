@@ -1,0 +1,235 @@
+@import "abstracts/_template";
+
+/* buttons */
+.ui-button {
+	@include layout-button;
+}
+.button-group {
+	@include button-group;
+}
+
+/* grid */
+.grid {
+	@extend %layout-grid;
+}
+
+/* tabs */
+.ui-tab-type-web {
+	@include ui-tab-type-web;
+	// 필요시 추가요소
+	&.fixed {
+		position: fixed;
+		top: 0;
+		z-index: 100;
+	}
+}
+.ui-tab-type-app {
+	@include ui-tab-type-app;
+}
+
+/* divisions */
+.ui-dividing {
+	@include ui-division-line;
+}
+.ui-inner {
+	@include ui-inner-division;
+}
+
+/* messages */
+.ui-message {
+	@include ui-message;
+}
+
+/* icons layout - clearfix */
+.iconContainer {
+	@include clearfix;
+}
+
+/* icons */
+.icon-exclamation {
+	@extend %icon-exclamation;
+	width: 25px;
+	height: 25px;
+	content: "";
+	display: block;
+}
+.icon-menu-down {
+	@extend %icon-menu-down;
+	width: 10px;
+	height: 5.5px;
+	content: "";
+	display: block;
+}
+.icon-menu-right-orange {
+	@extend %icon-menu-right-orange;
+	width: 5px;
+	height: 8px;
+	content: "";
+	display: block;
+}
+.icon-detail-filter {
+	@extend %icon-detail-filter;
+	width: 16px;
+	height: 12px;
+	content: "";
+	display: block;
+}
+.icon-plus {
+	@extend %icon-plus;
+	width: 12px;
+	height: 12px;
+	content: "";
+	display: block;
+}
+.icon-triangle-top {
+	@extend %icon-triangle-top;
+	width: 9px;
+	height: 10px;
+	content: "";
+	display: block;
+}
+.icon-triangle-bottom {
+	@extend %icon-triangle-bottom;
+	width: 9px;
+	height: 10px;
+	content: "";
+	display: block;
+}
+.icon-triangle-bottom-gray {
+	@extend %icon-triangle-bottom-gray;
+	width: 9px;
+	height: 10px;
+	content: "";
+	display: block;
+}
+.icon-hot-label {
+	@extend %icon-hot-label;
+	width: 30px;
+	height: 29px;
+	content: "";
+	display: block;
+}
+.icon-hot {
+	@extend %icon-hot;
+	width: 27px;
+	height: 14px;
+	content: "";
+	display: block;
+}
+.icon-contract {
+	@extend %icon-contract;
+	width: 10px;
+	height: 15px;
+	content: "";
+	display: block;
+}
+.icon-star {
+	@extend %icon-star;
+	width: 22px;
+	height: 21px;
+	content: "";
+	display: block;
+}
+.icon-star-empty {
+	@extend %icon-star-empty;
+	width: 22px;
+	height: 21px;
+	content: "";
+	display: block;
+}
+.icon-infomation {
+	@extend %icon-infomation;
+	width: 12px;
+	height: 12px;
+	content: "";
+	display: block;
+}
+.icon-remove {
+	@extend %icon-remove;
+	content: "";
+	display: block;
+	width: 14px;
+	height: 14px;
+}
+.icon-hamberger {
+	@extend %icon-hamberger;
+	content: "";
+	display: block;
+	width: 12px;
+	height: 15px;
+}
+.icon-logo {
+	@extend %icon-logo;
+	content: "";
+	display: block;
+	width: 88px;
+	height: 18px;
+}
+.icon-mypage {
+	@extend %icon-mypage;
+	content: "";
+	display: block;
+	width: 16px;
+	height: 18px;
+}
+.icon-search {
+	@extend %icon-search;
+	content: "";
+	display: block;
+	width: 14px;
+	height: 14px;
+}
+.icon-triangle-top-footer {
+	@extend %icon-triangle-top-footer;
+	content: "";
+	display: block;
+	width: 8px;
+	height: 6px;
+}
+.icon-menu-right-black {
+	@extend %icon-menu-right-black;
+	content: "";
+	display: block;
+	width: 10px;
+	height: 10px;
+}
+.icon-menu-right-white {
+	@extend %icon-menu-right-white;
+	content: "";
+	display: block;
+	width: 50px;
+	height: 50px;
+}
+
+/* lists */
+.list-detail-filter {
+	@include list-detail-filter;
+}
+.list-detail-sort {
+	@include list-detail-sort;
+}
+.hash-tag {
+	@include hash-tag;
+}
+.list-m-top-plus {
+	@include list-m-top-plus;
+}
+.list-m-top-logo {
+	@include list-m-top-logo;
+}
+.list-m-top {
+	@include list-m-top;
+}
+.list-normal-type {
+	@include list-normal-type;
+}
+
+/* layer popup */
+.layer-popup {
+	@extend %layout-layer;
+}
+
+/* layer popup - designed */
+.layer-popup-promotion {
+	@extend %layout-layer-promotion;
+}
