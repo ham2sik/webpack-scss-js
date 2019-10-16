@@ -1,0 +1,26 @@
+// type: @mixin, %(플레이스홀더 셀렉터, 가상선택자)
+
+/// @name layout-grid,make-grid
+///
+/// @output
+///   .grid-1.grid {width: 8.33333%;}
+///   .grid-2.grid {width: 16.66667%;}
+///   ...
+///   .grid-12.grid {width: 100%;}
+///
+/// @example
+///   .grid {
+///	    @extend %layout-grid;
+///   }
+@mixin make-grid($size: 12) {
+	@for $i from 1 through $size {
+		&.grid-#{$i} {
+			width: $i / 12 * 100%;
+		}
+	}
+}
+
+// 12 of columns
+%layout-grid {
+	@include make-grid;
+}
