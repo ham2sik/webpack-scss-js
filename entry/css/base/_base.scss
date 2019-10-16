@@ -1,0 +1,103 @@
+// 선언된 scss: common.scss
+// type: css
+
+@import "abstracts/_mixins"; // clearfix
+@import "base/_colors"; // color common css
+@import "components/_icons"; // .icon-emergency
+
+/* clearfix */
+.clearfix {
+	@include clearfix;
+}
+
+/* input */
+input[type="text"],
+input[type="number"],
+input[type="password"],
+input[type="email"],
+input[type="search"],
+input[type="tel"] {
+	min-height: 32px;
+	padding: 0 8px;
+	border: 1px solid #bcbec3;
+	border-radius: 1px;
+	line-height: 14px;
+}
+input[type="text"]::-webkit-input-placeholder {
+	line-height: 14px;
+	font-size: 14px;
+	vertical-align: middle;
+}
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+select:focus,
+textarea:focus {
+	border-color: #f63;
+	outline: none;
+}
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+	-webkit-appearance: none;
+}
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+	appearance: none;
+}
+
+/* IE10 이상에서 input box 에 추가된 지우기 버튼 제거 */
+input::-ms-clear {
+	display: none;
+}
+
+/* from reset */
+// 레이어용Skip
+.skip {
+	visibility: hidden;
+	overflow: hidden;
+	position: absolute;
+	left: -9000em;
+	width: 0;
+	height: 0;
+	font-size: 1px;
+	line-height: 1px;
+	color: transparent;
+}
+// 버튼용Skip
+.skip2 {
+	width: 0px;
+	height: 0px;
+	width: 0;
+	height: 0;
+	font-size: 0;
+	line-height: 0;
+	color: rgba(255, 255, 255, 0);
+}
+
+.hide {
+	display: none;
+	visibility: hidden;
+}
+
+/* icon */
+.icon-emergency {
+	color: #ff0000;
+	font-size: 0.8em;
+	vertical-align: 1px;
+	&::before {
+		@extend %icon-emergency;
+		content: "";
+		position: relative;
+		top: -1px;
+		display: inline-block;
+		vertical-align: middle;
+		width: 9px;
+		height: 10px;
+		margin-right: 2px;
+	}
+}
