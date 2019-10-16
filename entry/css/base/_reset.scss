@@ -1,0 +1,186 @@
+@import "components/_icons";
+
+html {
+	-webkit-text-size-adjust: none;
+}
+html,
+body {
+	height: 100%;
+	position: relative;
+}
+body,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+ol,
+li,
+dl,
+dt,
+dd,
+table,
+th,
+td,
+form,
+fieldset,
+legend,
+input,
+textarea,
+button,
+header,
+footer,
+nav,
+article,
+section {
+	margin: 0;
+	padding: 0;
+	-webkit-text-size-adjust: none;
+}
+article,
+aside,
+canvas,
+details,
+embed,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary {
+	display: block;
+}
+body,
+input,
+textarea,
+select,
+table,
+button,
+code {
+	font-size: 14px;
+	font-family: "Apple SD Gothic Neo", Arial, Dotum, sans-serif;
+	line-height: 1.25em;
+}
+body {
+	background: #fff;
+	color: #494949;
+}
+ul,
+ol,
+li {
+	list-style: none;
+}
+table {
+	border-collapse: collapse;
+}
+img,
+fieldset {
+	border: 0;
+}
+a {
+	text-decoration: none;
+	cursor: pointer;
+	color: #404040;
+}
+label {
+	cursor: pointer;
+}
+em,
+address {
+	font-style: normal;
+}
+hr {
+	display: none;
+}
+input,
+textarea,
+select {
+	-webkit-appearance: none;
+	width: 100%;
+} /* wekit브라우저에서 다른 모양 리셋 */
+input[type="text"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[type="email"],
+input[type="tel"],
+textarea {
+	box-sizing: border-box;
+	border: 1px solid #b4bac0;
+	padding: 0 8px;
+	padding: 0px\9;
+}
+textarea {
+	padding: 8px;
+	padding: 0px\9;
+}
+input[type="checkbox"],
+input[type="radio"] {
+	margin: 0;
+	border: 1px solid #999;
+}
+input[type="radio"] {
+	border-radius: 8px;
+	-webkit-appearance: radio;
+}
+input[type="checkbox"] {
+	border-radius: 4px;
+	-webkit-appearance: checkbox;
+}
+input[type="text"]::-ms-clear {
+	display: none;
+}
+select::-ms-expand {
+	display: none;
+}
+input:checked[type="checkbox"],
+input:checked[type="radio"] {
+	background-color: #2d2d2d;
+	border: 0;
+}
+input::-webkit-input-placeholder {
+	color: #999;
+}
+input::input-placeholder {
+	color: #999;
+}
+select {
+	@extend %icon-select-menu-down;
+	box-sizing: border-box;
+	border: 1px solid #b4bac0;
+	border-radius: 2px;
+	padding: 3px 20px 0 10px;
+	min-height: 32px;
+}
+select:disabled {
+	background-color: #e2e1e1;
+	color: #8f8f90;
+}
+button {
+	-webkit-appearance: none;
+	cursor: pointer;
+	border: 0;
+	color: #666;
+	background-color: transparent;
+}
+a,
+button,
+input,
+textarea {
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	-webkit-tap-highlight-color: transparent;
+}
+input:focus::-webkit-input-placeholder,
+textarea:focus::-webkit-input-placeholder {
+	color: transparent;
+}
+header {
+	position: relative;
+	z-index: 2200;
+}
