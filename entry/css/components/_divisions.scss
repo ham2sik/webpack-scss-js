@@ -1,0 +1,50 @@
+// type: @mixin, %(플레이스홀더 셀렉터, 가상선택자)
+
+%layout-division-line {
+	background-color: #fff;
+	&:after {
+		content: "";
+		display: block;
+		border-bottom: 1px solid #e5e7ea;
+	}
+}
+
+@mixin ui-division-line() {
+	@extend %layout-division-line;
+	&.bg-gray {
+		background-color: #f1f4f8;
+	}
+	&.none-border:after {
+		content: "";
+		display: block;
+		border-bottom: none;
+	}
+	&.expand {
+		border-bottom: 6px solid #f1f4f8;
+		&:last-child {
+			border-bottom: none;
+		}
+	}
+}
+
+%layout-inner-division {
+	box-sizing: border-box;
+	padding: 18px;
+	position: relative;
+}
+
+@mixin ui-inner-division() {
+	@extend %layout-inner-division;
+	&.none-top {
+		padding-top: 0;
+	}
+	&.none-bottom {
+		padding-bottom: 0;
+	}
+	&.min {
+		padding: 9px 12px;
+	}
+	&.side {
+		padding: 0px 15px;
+	}
+}
