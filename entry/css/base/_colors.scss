@@ -1,0 +1,30 @@
+// 선언된 scss: common.scss > _base.scss
+// type: css
+@import "abstracts/_variables";
+
+// 특정 color값 적용, !important 사용
+$object-make-color-class: (
+	color-main: $color-main,
+	color-main-bg: $color-main-bg,
+	color-secondary: $color-secondary,
+	color-secondary-bg: $color-secondary-bg,
+	color-apple: $color-apple,
+	color-orange: $color-orange,
+	color-blue: $color-blue,
+	color-skyblue: $color-skyblue,
+	color-deep-blue: $color-deep-blue,
+	color-gray: $color-gray,
+	color-light-gray: $color-light-gray,
+	color-income-per-hour: $color-income-per-hour,
+	color-daily-income: $color-daily-income,
+	color-monthly-income: $color-monthly-income,
+	color-income-per-case: $color-income-per-case,
+	color-weekly-income: $color-weekly-income,
+	color-yearly-income: $color-yearly-income
+);
+
+@each $key, $value in $object-make-color-class {
+	.#{$key} {
+		color: $value !important;
+	}
+}
