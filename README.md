@@ -21,7 +21,7 @@ scss-project/
 │  │  ├─ base/
 │  │  │  ├─ _base.scss // base rules(css type, common.scss import)
 │  │  │  ├─ _colors.scss // color rules(css type, common.scss import)
-│  │  │  └─ _reset.scss // reset/normalize(css type, common.scss import)
+│  │  │  └─ _reset.scss // reset / normalize(css type, common.scss import)
 │  │  ├─ components/ (or modules/)
 │  │  │  ├─ _buttons.scss
 │  │  │  ├─ _divisions.scss
@@ -71,30 +71,29 @@ scss-project/
 
 # What's included
 
-| Name                       | Description                                                    | Type                       |
-| -------------------------- | -------------------------------------------------------------- | ----------------------------- |
-| abstracts/ | | |
-| abstracts/\_mixins.scss | @mixin: box-sizing, display-flex, flex, order, flex-wrap, align-content, flex-direction, transform, animation,   keyframes, transition, calc, clearfix | @mixin |
-| abstracts/\_template.scss | all file(abstracts, base, components, layout) import | |
-| abstracts/\_variables.scss | color, icon(data:image), easing variables, icon function | $(variables), @function |
-| base/ | | |
-| base/\_base.scss | base rules(common.scss import) | css |
-| base/\_colors.scss | color rules(common.scss import) | css |
-| base/\_reset.scss | reset / normalize(common.scss import) | css |
-| components/ | | |
-| components/\_buttons.scss | @mixin: layout-button, button-group | @mixin |
-| components/\_divisions.scss | %: layout-division-line, layout-inner-division, 
-@mixin ui-division-line, ui-inner-division | %, @mixin |
-| components/\_icons.scss | icon(used \_variables.scss) Placeholder Selectors(%) | % |
-| components/\_layers.scss  | %: layout-layer, layout-layer-promotion | % |
-| components/\_lists.scss | @mixin: list-detail-filter, list-detail-sort, hash-tag, list-m-top-plus, list-m-top-logo, list-m-top, list-normal-type, %list-layout | %, @mixin |
-| components/\_messages.scss  | %layout-message, @mixin ui-message | %, @mixin |
-| components/\_tabs.scss  | %layout-tab, @mixin ui-tab-type-web, @mixin ui-tab-type-app | %, @mixin |
-| layout/   | | |
-| layout/\_aligns.scss | @mixin v-align, h-align, c-align, %layout-align | %, @mixin |
-| layout/\_footer.scss | .footer(main) | css |
-| layout/\_forms.scss | | |
-| layout/\_grid.scss | @mixin make-grid($size: 12), %layout-grid | %, @mixin |
-| layout/\_header.scss | header, %header-util-button(main) | css |
-| layout/\_navigation.scss | | |
-| layout/\_sidebar.scss | | |
+| Name                        | Description                                                                                                                                                                   | Type                     |
+| --------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------ |
+| abstracts/                  |                                                                                                                                                                               |                          |
+| abstracts/\_mixins.scss     | @mixin clearfix                                                                                                                                                               | @mixin                   |
+| abstracts/\_template.scss   | all file(abstracts, base, components, layout) import                                                                                                                          |                          |
+| abstracts/\_variables.scss  | color, icon(data:image), easing variables, icon function                                                                                                                      | \$(variables), @function |
+| base/                       |                                                                                                                                                                               |                          |
+| base/\_base.scss            | base rules(common.scss import)                                                                                                                                                | css                      |
+| base/\_colors.scss          | color rules(common.scss import)                                                                                                                                               | css                      |
+| base/\_reset.scss           | reset / normalize(common.scss import)                                                                                                                                         | css                      |
+| components/                 |                                                                                                                                                                               |                          |
+| components/\_buttons.scss   | @mixin layout-button, @mixin button-group                                                                                                                                     | @mixin                   |
+| components/\_divisions.scss | %layout-division-line, @mixin ui-division-line, %layout-inner-division, @mixin ui-inner-division                                                                              | %, @mixin                |
+| components/\_icons.scss     | icon(used \_variables.scss) Placeholder Selectors(%)                                                                                                                          | %                        |
+| components/\_layers.scss    | %layout-layer, %layout-layer-promotion                                                                                                                                        | %                        |
+| components/\_lists.scss     | @mixin list-detail-filter, @mixin list-detail-sort, %list-layout, @mixin hash-tag, @mixin list-m-top-plus, @mixin list-m-top-logo, @mixin list-m-top, @mixin list-normal-type | %, @mixin                |
+| components/\_messages.scss  | %layout-message, @mixin ui-message                                                                                                                                            | %, @mixin                |
+| components/\_tabs.scss      | %layout-tab, @mixin ui-tab-type-web, @mixin ui-tab-type-app                                                                                                                   | %, @mixin                |
+| layout/                     |                                                                                                                                                                               |                          |
+| layout/\_aligns.scss        | @mixin v-align, @mixin h-align, @mixin c-align, %layout-align                                                                                                                 | %, @mixin                |
+| layout/\_footer.scss        | .footer(main css)                                                                                                                                                             | css                      |
+| layout/\_forms.scss         |                                                                                                                                                                               |                          |
+| layout/\_grid.scss          | @mixin make-grid(\$size: 12), %layout-grid                                                                                                                                    | %, @mixin                |
+| layout/\_header.scss        | header(main css), %header-util-button                                                                                                                                         | css                      |
+| layout/\_navigation.scss    |                                                                                                                                                                               |                          |
+| layout/\_sidebar.scss       |                                                                                                                                                                               |                          |
