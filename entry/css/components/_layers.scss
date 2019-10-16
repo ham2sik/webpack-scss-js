@@ -1,0 +1,103 @@
+// type: %(플레이스홀더 셀렉터, 가상선택자)
+
+@import "components/_buttons";
+@import "components/_icons";
+@import "layout/_aligns";
+
+%layout-layer {
+	display: none;
+	background-color: rgba(0, 0, 0, 0.5);
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 2200;
+	&.on {
+		display: block;
+	}
+	.popup {
+		@extend %layout-align;
+		position: absolute;
+		background-color: #fff;
+		width: 90%;
+		left: 5%;
+		.popup-header {
+			box-sizing: border-box;
+			position: relative;
+			border-bottom: 2px solid #ff6633;
+			padding: 12px 18px;
+			h1 {
+				font-size: 18px;
+				font-weight: bold;
+				display: inline-block;
+				vertical-align: middle;
+			}
+			.closed {
+				position: absolute;
+				top: 0;
+				right: 0;
+				padding: 14px;
+				text-indent: -9999px;
+				&:after {
+					@extend %icon-remove;
+					content: "";
+					display: block;
+					position: relative;
+					width: 14px;
+					height: 14px;
+				}
+			}
+		}
+		.popup-view {
+			box-sizing: border-box;
+			padding: 20px 18px;
+		}
+		.popup-bottom {
+			@include button-group;
+			margin: 0;
+			button {
+				@include layout-button;
+			}
+		}
+	}
+}
+
+%layout-layer-promotion {
+	display: none;
+	background-color: rgba(0, 0, 0, 0.5);
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 2200;
+	&.on {
+		display: block;
+	}
+	.promotion {
+		@extend %layout-align;
+		position: absolute;
+		background-color: #fff;
+		min-width: 250px;
+		-webkit-box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+		box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+		border-radius: 6px;
+		overflow: hidden;
+		.promotion-image {
+			width: 100%;
+			vertical-align: top;
+		}
+		.popup-bottom {
+			@include button-group;
+			margin-bottom: 0;
+			button {
+				@include layout-button;
+				height: 45px;
+				&:last-child {
+					border-left: none;
+				}
+			}
+		}
+	}
+}
