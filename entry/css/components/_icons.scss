@@ -1,0 +1,121 @@
+// 선언된 scss: _buttons.scss, common.scss
+// type: %(플레이스홀더 셀렉터, 가상선택자)
+
+@import "abstracts/_variables";
+
+%layout-icon-background-default {
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-color: transparent;
+}
+
+%icon-select-menu-down {
+	background-image: url($icon-menu-down);
+	background-repeat: no-repeat;
+	background-size: 10px 5.5px;
+	background-color: transparent;
+	background-position: -webkit-calc(100% - 7px) center;
+	background-position: calc(100% - 7px) center;
+}
+%icon-select-triangle-bottom {
+	background-image: url($icon-triangle-bottom-gray);
+	background-repeat: no-repeat;
+	background-size: 9px 5px;
+	background-color: transparent;
+	background-position: -webkit-calc(100% - 7px) center;
+	background-position: calc(100% - 7px) center;
+}
+
+%icon-detail-filter {
+	background-image: url($icon-detail-filter);
+	@extend %layout-icon-background-default;
+}
+%icon-plus {
+	background-image: url($icon-plus);
+	@extend %layout-icon-background-default;
+}
+%icon-triangle-top {
+	background-image: url($icon-triangle-top);
+	@extend %layout-icon-background-default;
+}
+%icon-triangle-bottom {
+	background-image: url($icon-triangle-bottom);
+	@extend %layout-icon-background-default;
+}
+%icon-triangle-bottom-gray {
+	background-image: url($icon-triangle-bottom-gray);
+	@extend %layout-icon-background-default;
+}
+%icon-exclamation {
+	background-image: url($icon-exclamation);
+	@extend %layout-icon-background-default;
+}
+%icon-menu-down {
+	background-image: url($icon-menu-down);
+	@extend %layout-icon-background-default;
+}
+%icon-menu-right-orange {
+	background-image: url($icon-menu-right-orange);
+	@extend %layout-icon-background-default;
+}
+%icon-hot-label {
+	background-image: url($icon-hot-label);
+	@extend %layout-icon-background-default;
+}
+%icon-hot {
+	background-image: url($icon-hot);
+	@extend %layout-icon-background-default;
+}
+%icon-contract {
+	background-image: url($icon-contract);
+	@extend %layout-icon-background-default;
+}
+%icon-star {
+	background-image: url($icon-star);
+	@extend %layout-icon-background-default;
+}
+%icon-star-empty {
+	background-image: url($icon-star-empty);
+	@extend %layout-icon-background-default;
+}
+%icon-infomation {
+	background-image: url($icon-infomation);
+	@extend %layout-icon-background-default;
+}
+%icon-emergency {
+	background-image: url($icon-emergency);
+	@extend %layout-icon-background-default;
+}
+%icon-remove {
+	background-image: url($icon-remove);
+	@extend %layout-icon-background-default;
+}
+%icon-hamberger {
+	background-image: url($icon-hamberger);
+	@extend %layout-icon-background-default;
+}
+%icon-logo {
+	background-image: url($icon-logo);
+	@extend %layout-icon-background-default;
+}
+%icon-mypage {
+	background-image: url($icon-mypage);
+	@extend %layout-icon-background-default;
+}
+%icon-search {
+	background-image: url($icon-search);
+	@extend %layout-icon-background-default;
+}
+%icon-triangle-top-footer {
+	background-image: url($icon-triangle-top-footer);
+	@extend %layout-icon-background-default;
+}
+
+%icon-menu-right-black {
+	background-image: icon-menu-right(#000);
+	@extend %layout-icon-background-default;
+}
+%icon-menu-right-white {
+	background-image: icon-menu-right(#fff);
+	@extend %layout-icon-background-default;
+}
