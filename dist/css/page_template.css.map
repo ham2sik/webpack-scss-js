@@ -1,0 +1,1 @@
+{"version":3,"sources":["page_template.css"],"names":[],"mappings":"AAAA,cACE,gCAAiC,AACjC,6BAA8B,AAC9B,uBAAyB,CAAE","file":"page_template.css","sourcesContent":[".autoprefixer {\n  width: -webkit-calc(600px - 2em);\n  width: -moz-calc(600px - 2em);\n  width: calc(600px - 2em); }\n"]}
