@@ -1,0 +1,30 @@
+// type: %(플레이스홀더 셀렉터, 가상선택자)
+
+@mixin v-align() {
+	transform: translate(0, -50%);
+	position: absolute;
+	top: 50% !important;
+}
+@mixin h-align() {
+	transform: translate(-50%, 0);
+	position: absolute;
+	left: 50% !important;
+}
+@mixin c-align() {
+	transform: translate(-50%, -50%);
+	position: absolute;
+	top: 50% !important;
+	left: 50% !important;
+}
+
+%layout-align {
+	&.v-align {
+		@include v-align;
+	}
+	&.h-align {
+		@include h-align;
+	}
+	&.c-align {
+		@include c-align;
+	}
+}
