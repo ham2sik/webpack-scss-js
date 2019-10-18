@@ -1,0 +1,233 @@
+// SCSS variables are information about icon's compiled state, stored under its original file name
+//
+// .icon-home {
+//   width: $icon-home-width;
+// }
+//
+// The large array-like variables contain all information about a single icon
+// $icon-home: x y offset_x offset_y width height total_width total_height image_path;
+//
+// At the bottom of this section, we provide information about the spritesheet itself
+// $spritesheet: width height image $spritesheet-sprites;
+$btn-map-link-name: 'btnMapLink';
+$btn-map-link-x: 0px;
+$btn-map-link-y: 199px;
+$btn-map-link-offset-x: 0px;
+$btn-map-link-offset-y: -199px;
+$btn-map-link-width: 20px;
+$btn-map-link-height: 28px;
+$btn-map-link-total-width: 240px;
+$btn-map-link-total-height: 227px;
+$btn-map-link-image: '/content/images/common-sprite.png?v=2019101701';
+$btn-map-link: (0px, 199px, 0px, -199px, 20px, 28px, 240px, 227px, '/content/images/common-sprite.png?v=2019101701', 'btnMapLink', );
+$button-favorite-on-name: 'button-favorite-on';
+$button-favorite-on-x: 158px;
+$button-favorite-on-y: 112px;
+$button-favorite-on-offset-x: -158px;
+$button-favorite-on-offset-y: -112px;
+$button-favorite-on-width: 25px;
+$button-favorite-on-height: 24px;
+$button-favorite-on-total-width: 240px;
+$button-favorite-on-total-height: 227px;
+$button-favorite-on-image: '/content/images/common-sprite.png?v=2019101701';
+$button-favorite-on: (158px, 112px, -158px, -112px, 25px, 24px, 240px, 227px, '/content/images/common-sprite.png?v=2019101701', 'button-favorite-on', );
+$button-favorite-name: 'button-favorite';
+$button-favorite-x: 50px;
+$button-favorite-y: 146px;
+$button-favorite-offset-x: -50px;
+$button-favorite-offset-y: -146px;
+$button-favorite-width: 25px;
+$button-favorite-height: 24px;
+$button-favorite-total-width: 240px;
+$button-favorite-total-height: 227px;
+$button-favorite-image: '/content/images/common-sprite.png?v=2019101701';
+$button-favorite: (50px, 146px, -50px, -146px, 25px, 24px, 240px, 227px, '/content/images/common-sprite.png?v=2019101701', 'button-favorite', );
+$button-toggle-name: 'buttonToggle';
+$button-toggle-x: 204px;
+$button-toggle-y: 116px;
+$button-toggle-offset-x: -204px;
+$button-toggle-offset-y: -116px;
+$button-toggle-width: 35px;
+$button-toggle-height: 19px;
+$button-toggle-total-width: 240px;
+$button-toggle-total-height: 227px;
+$button-toggle-image: '/content/images/common-sprite.png?v=2019101701';
+$button-toggle: (204px, 116px, -204px, -116px, 35px, 19px, 240px, 227px, '/content/images/common-sprite.png?v=2019101701', 'buttonToggle', );
+$button-to-top-name: 'buttonToTop';
+$button-to-top-x: 0px;
+$button-to-top-y: 0px;
+$button-to-top-offset-x: 0px;
+$button-to-top-offset-y: 0px;
+$button-to-top-width: 76px;
+$button-to-top-height: 76px;
+$button-to-top-total-width: 240px;
+$button-to-top-total-height: 227px;
+$button-to-top-image: '/content/images/common-sprite.png?v=2019101701';
+$button-to-top: (0px, 0px, 0px, 0px, 76px, 76px, 240px, 227px, '/content/images/common-sprite.png?v=2019101701', 'buttonToTop', );
+$detail-infomation-name: 'detail-infomation';
+$detail-infomation-x: 0px;
+$detail-infomation-y: 146px;
+$detail-infomation-offset-x: 0px;
+$detail-infomation-offset-y: -146px;
+$detail-infomation-width: 40px;
+$detail-infomation-height: 43px;
+$detail-infomation-total-width: 240px;
+$detail-infomation-total-height: 227px;
+$detail-infomation-image: '/content/images/common-sprite.png?v=2019101701';
+$detail-infomation: (0px, 146px, 0px, -146px, 40px, 43px, 240px, 227px, '/content/images/common-sprite.png?v=2019101701', 'detail-infomation', );
+$education-name: 'education';
+$education-x: 0px;
+$education-y: 86px;
+$education-offset-x: 0px;
+$education-offset-y: -86px;
+$education-width: 60px;
+$education-height: 50px;
+$education-total-width: 240px;
+$education-total-height: 227px;
+$education-image: '/content/images/common-sprite.png?v=2019101701';
+$education: (0px, 86px, 0px, -86px, 60px, 50px, 240px, 227px, '/content/images/common-sprite.png?v=2019101701', 'education', );
+$experience-name: 'experience';
+$experience-x: 86px;
+$experience-y: 0px;
+$experience-offset-x: -86px;
+$experience-offset-y: 0px;
+$experience-width: 62px;
+$experience-height: 50px;
+$experience-total-width: 240px;
+$experience-total-height: 227px;
+$experience-image: '/content/images/common-sprite.png?v=2019101701';
+$experience: (86px, 0px, -86px, 0px, 62px, 50px, 240px, 227px, '/content/images/common-sprite.png?v=2019101701', 'experience', );
+$job-type-name: 'job-type';
+$job-type-x: 70px;
+$job-type-y: 86px;
+$job-type-offset-x: -70px;
+$job-type-offset-y: -86px;
+$job-type-width: 54px;
+$job-type-height: 50px;
+$job-type-total-width: 240px;
+$job-type-total-height: 227px;
+$job-type-image: '/content/images/common-sprite.png?v=2019101701';
+$job-type: (70px, 86px, -70px, -86px, 54px, 50px, 240px, 227px, '/content/images/common-sprite.png?v=2019101701', 'job-type', );
+$link-arrow-name: 'link-arrow';
+$link-arrow-x: 158px;
+$link-arrow-y: 78px;
+$link-arrow-offset-x: -158px;
+$link-arrow-offset-y: -78px;
+$link-arrow-width: 28px;
+$link-arrow-height: 24px;
+$link-arrow-total-width: 240px;
+$link-arrow-total-height: 227px;
+$link-arrow-image: '/content/images/common-sprite.png?v=2019101701';
+$link-arrow: (158px, 78px, -158px, -78px, 28px, 24px, 240px, 227px, '/content/images/common-sprite.png?v=2019101701', 'link-arrow', );
+$link-detail-name: 'link-detail';
+$link-detail-x: 85px;
+$link-detail-y: 146px;
+$link-detail-offset-x: -85px;
+$link-detail-offset-y: -146px;
+$link-detail-width: 24px;
+$link-detail-height: 24px;
+$link-detail-total-width: 240px;
+$link-detail-total-height: 227px;
+$link-detail-image: '/content/images/common-sprite.png?v=2019101701';
+$link-detail: (85px, 146px, -85px, -146px, 24px, 24px, 240px, 227px, '/content/images/common-sprite.png?v=2019101701', 'link-detail', );
+$link-question-name: 'link-question';
+$link-question-x: 204px;
+$link-question-y: 78px;
+$link-question-offset-x: -204px;
+$link-question-offset-y: -78px;
+$link-question-width: 29px;
+$link-question-height: 28px;
+$link-question-total-width: 240px;
+$link-question-total-height: 227px;
+$link-question-image: '/content/images/common-sprite.png?v=2019101701';
+$link-question: (204px, 78px, -204px, -78px, 29px, 28px, 240px, 227px, '/content/images/common-sprite.png?v=2019101701', 'link-question', );
+$swipe-left-name: 'swipe-left';
+$swipe-left-x: 158px;
+$swipe-left-y: 0px;
+$swipe-left-offset-x: -158px;
+$swipe-left-offset-y: 0px;
+$swipe-left-width: 36px;
+$swipe-left-height: 68px;
+$swipe-left-total-width: 240px;
+$swipe-left-total-height: 227px;
+$swipe-left-image: '/content/images/common-sprite.png?v=2019101701';
+$swipe-left: (158px, 0px, -158px, 0px, 36px, 68px, 240px, 227px, '/content/images/common-sprite.png?v=2019101701', 'swipe-left', );
+$swipe-right-name: 'swipe-right';
+$swipe-right-x: 204px;
+$swipe-right-y: 0px;
+$swipe-right-offset-x: -204px;
+$swipe-right-offset-y: 0px;
+$swipe-right-width: 36px;
+$swipe-right-height: 68px;
+$swipe-right-total-width: 240px;
+$swipe-right-total-height: 227px;
+$swipe-right-image: '/content/images/common-sprite.png?v=2019101701';
+$swipe-right: (204px, 0px, -204px, 0px, 36px, 68px, 240px, 227px, '/content/images/common-sprite.png?v=2019101701', 'swipe-right', );
+$spritesheet-width: 240px;
+$spritesheet-height: 227px;
+$spritesheet-image: '/content/images/common-sprite.png?v=2019101701';
+$spritesheet-sprites: ($btn-map-link, $button-favorite-on, $button-favorite, $button-toggle, $button-to-top, $detail-infomation, $education, $experience, $job-type, $link-arrow, $link-detail, $link-question, $swipe-left, $swipe-right, );
+$spritesheet: (240px, 227px, '/content/images/common-sprite.png?v=2019101701', $spritesheet-sprites, );
+
+// The provided mixins are intended to be used with the array-like variables
+//
+// .icon-home {
+//   @include sprite-width($icon-home);
+// }
+//
+// .icon-email {
+//   @include sprite($icon-email);
+// }
+//
+// Example usage in HTML:
+//
+// `display: block` sprite:
+// <div class="icon-home"></div>
+//
+// To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+//
+// // CSS
+// .icon {
+//   display: inline-block;
+// }
+//
+// // HTML
+// <i class="icon icon-home"></i>
+@mixin sprite-width($sprite) {
+  width: nth($sprite, 5);
+}
+
+@mixin sprite-height($sprite) {
+  height: nth($sprite, 6);
+}
+
+@mixin sprite-position($sprite) {
+  $sprite-offset-x: nth($sprite, 3);
+  $sprite-offset-y: nth($sprite, 4);
+  background-position: $sprite-offset-x  $sprite-offset-y;
+}
+
+@mixin sprite-image($sprite) {
+  $sprite-image: nth($sprite, 9);
+  background-image: url(#{$sprite-image});
+}
+
+@mixin sprite($sprite) {
+  @include sprite-image($sprite);
+  @include sprite-position($sprite);
+  @include sprite-width($sprite);
+  @include sprite-height($sprite);
+}
+
+// The `sprites` mixin generates identical output to the CSS template
+//   but can be overridden inside of SCSS
+//
+// @include sprites($spritesheet-sprites);
+@mixin sprites($sprites) {
+  @each $sprite in $sprites {
+    $sprite-name: nth($sprite, 10);
+    .#{$sprite-name} {
+      @include sprite($sprite);
+    }
+  }
+}
