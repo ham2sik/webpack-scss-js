@@ -63,7 +63,8 @@ const config = {
 			base: path.resolve(__dirname, "entry/css/base/"),
 			components: path.resolve(__dirname, "entry/css/components/"),
 			layout: path.resolve(__dirname, "entry/css/layout/"),
-			pages: path.resolve(__dirname, "entry/css/pages/")
+			pages: path.resolve(__dirname, "entry/css/pages/"),
+			sprites: path.resolve(__dirname, "entry/css/sprites/")
 		}
 	}
 };
