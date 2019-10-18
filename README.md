@@ -8,6 +8,8 @@ scss-project/
 │  ├─ css/
 │  │  ├─ common.css
 │  │  └─ common.css.map
+│  ├─ img/
+│  │  └─ common-sprite.png
 │  └─ js/
 │     ├─ common.min.js
 │     └─ common.min.js.map
@@ -38,9 +40,16 @@ scss-project/
 │  │  │  ├─ _header.scss
 │  │  │  ├─ _navigation.scss
 │  │  │  └─ _sidebar.scss
-│  │  └─ pages/
-│  │     ├─ common.scss
-│  │     └─ main.scss
+│  │  ├─ pages/
+│  │  │  ├─ common.scss
+│  │  │  └─ main.scss
+│  │  └─ sprites/
+│  │     └─ common-sprite.scss
+│  ├─ img/
+│  │  ├─ common
+│  │  │  ├─ button-favorite-on.png
+│  │  │  └─ button-favorite.png
+│  │  └─ dummy.js
 │  ├─ js/ (based AM-M)
 │  │  ├─ aside
 │  │  ├─ common
@@ -65,7 +74,9 @@ scss-project/
 │  └─ page_template.html
 │
 ├─ css-config.js
+├─ img-config.js
 ├─ js-config.js
+├─ jsconfig.json (option, VS Code file)
 └─ webpack.config.js
 ```
 
